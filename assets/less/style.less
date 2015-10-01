@@ -1,0 +1,55 @@
+@import "variables-custom.less"; 
+
+header {
+	&.top-header {
+		padding: 4px; 
+		margin-bottom: 24px; 
+		
+		a {
+			font-size: 12px; 
+			color: #777; 
+
+			&:hover {
+				color: lighten(#777, 20%); 
+			}
+		}
+	}
+
+	&.branding {
+		margin-bottom: 24px; 
+
+		img {
+			max-width: 100%; 
+			height: auto;
+		}
+
+		.col-padding {
+			padding: 28px 15px; 
+		}
+
+		.col-padding-small {
+			padding: 18px 15px; 
+		}
+
+		.pull-right > .dropdown-menu {
+			top: 56px; 
+		}
+	}
+
+	&.navigation {
+	}
+}
+
+a {
+	&.navbar-brand {
+		font-size: 14px; 
+		text-transform: uppercase;
+		font-weight: 400; 
+	}
+}
+
+footer {
+	padding: 80px 0; 
+	background-color: #f6f6f6; 
+	margin-top: 40px; 
+}

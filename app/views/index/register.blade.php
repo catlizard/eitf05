@@ -1,0 +1,87 @@
+@extends('template')
+
+@section('title')
+	Register!
+@stop
+
+@section('sidebar-left')
+	<ul class="nav nav-pills nav-stacked">
+		<li class="active"><a href="#">Item 1</a></li>
+		<li><a href="#">Item 2</a></li>
+		<li><a href="#">Item 3</a></li>
+		<li><a href="#">Item 4</a></li>
+	</ul>
+
+	<div class="brands">
+		<h5>Popular brands</h5>
+		<img src="http://placehold.it/120x80" class="thumbnail">
+		<img src="http://placehold.it/120x80" class="thumbnail">
+		<img src="http://placehold.it/120x80" class="thumbnail">
+	</div>
+@stop
+
+@section('content')
+	<h5>Please fill the following form</h5>
+	<hr>
+	<form action="register" method="POST">
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">First name</label>
+						<input type="text" class="form-control" name="first_name" placeholder="First name" required>
+					</div>	
+
+					<div class="form-group">
+						<label class="control-label">Last name</label>
+						<input type="text" class="form-control" name="last_name" placeholder="Last name" required>
+					</div>		
+
+					<div class="form-group">
+						<label class="control-label">E-mail</label>
+						<input type="text" class="form-control" name="email" placeholder="E-mail" required>
+					</div>					
+
+					<div class="form-group">
+						<label class="control-label">Password</label>
+						<input type="password" class="form-control" name="password" required>
+					</div>	
+
+					<div class="form-group">
+						<label class="control-label">Confirm your password</label>
+						<input type="password" class="form-control" name="password_confirm" required>
+					</div>																			
+				</div>
+
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Country</label>
+						<input type="text" class="form-control" name="country" placeholder="country">
+					</div>	
+
+					<div class="form-group">
+						<label class="control-label">Address</label>
+						<input type="text" class="form-control" name="address" placeholder="Address">
+					</div>		
+
+					<div class="form-group">
+						<label class="control-label">City</label>
+						<input type="text" class="form-control" name="city" placeholder="City">
+					</div>					
+
+					<div class="form-group">
+						<label class="control-label">Zip</label>
+						<input type="text" class="form-control" name="zip" placeholder="Zip-code">
+					</div>	
+
+					<button type="submit" class="btn btn-primary btn-block">Submit</button>				
+				</div>				
+			</div>
+
+
+		</div>
+	</form>
+@stop
+
+@section('scripts')
+@stop

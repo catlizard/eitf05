@@ -1,0 +1,41 @@
+<?php $__env->startSection('title'); ?>
+	Register!
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('sidebar-left'); ?>
+	<ul class="nav nav-pills nav-stacked">
+		<li class="active"><a href="#">Item 1</a></li>
+		<li><a href="#">Item 2</a></li>
+		<li><a href="#">Item 3</a></li>
+		<li><a href="#">Item 4</a></li>
+	</ul>
+
+	<div class="brands">
+		<h5>Popular brands</h5>
+		<img src="http://placehold.it/120x80" class="thumbnail">
+		<img src="http://placehold.it/120x80" class="thumbnail">
+		<img src="http://placehold.it/120x80" class="thumbnail">
+	</div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<?php if(isset($flash_error) && $flash_error !== null): ?>) 
+		<div class="alert alert-danger" role="alert"><?php echo e($flash_error); ?></div>
+	<?php endif; ?>
+
+	<h5>Thank you for shopping at Supershop!</h5>
+	
+	<hr>
+
+	<h6>Purchase confirmation:</h6>
+	<ul>
+		<li>Total amount charged: <?php echo e($postParams->total_price); ?>$</li>
+	</ul>
+
+	<a href="<?php echo e(APP_URL); ?>">Click here to go back to the front page.</a>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
