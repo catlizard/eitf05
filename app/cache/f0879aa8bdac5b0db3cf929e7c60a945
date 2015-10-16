@@ -12,7 +12,7 @@
 
 <div class="brands">
 	<h5>Popular brands</h5>
-	<img src="<?php echo e(APP_URL); ?>/logout" class="thumbnail">
+	<img src="http://placehold.it/120x80" class="thumbnail">
 	<img src="http://placehold.it/120x80" class="thumbnail">
 	<img src="http://placehold.it/120x80" class="thumbnail">
 </div>

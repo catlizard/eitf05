@@ -15,8 +15,8 @@ $klein->respond('POST', '/register', function($request, $response) use($blade, $
 
 	// Prepare parameters
 	$email = $postParams->email; 
-	$password = crypt($postParams->password, "a!4n39)u+ZfnS*Sm"); 
-	$first_name = $postParams->first_name; 
+	$password = crypt($postParams->password);
+	$first_name = $_POST['first_name']; 
 	$last_name = $postParams->last_name;  
 	$country = $postParams->country; 
 	$address = $postParams->address; 
@@ -52,10 +52,10 @@ $klein->respond('GET', '/login', function() use($blade) {
 $klein->respond('POST', '/login', function($request, $response, $service) use($blade, $db) {
 	$postParams = $request->paramsPost(); 
 
-	$email = $_POST['email']; 
-	$password = $_POST['password']; 
+	$email = $postParams->email;
+	$password = $postParams->password;
 
-   	$sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";	
+    $sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
 
    	$result = $db->query($sql); 
 

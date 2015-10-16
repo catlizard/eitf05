@@ -50,10 +50,7 @@ class Database {
 			$return_result['status'] = false;
 
 			$return_result['mysqli_error_no'] = $this->database_link->errno;
-			$return_result['mysqli_error'] = $this->database_link->error;
-
-			var_dump($return_result); 
-			exit(); 			
+			$return_result['mysqli_error'] = $this->database_link->error;		
 
 			error_log('Unable to run query ( Error: ' . $this->database_link->errno . ' Description: ' . $this->database_link->error . '), this was the supplied SQL: ' . $query);
 		} else {
